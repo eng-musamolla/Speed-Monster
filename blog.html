@@ -1,19 +1,176 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
     <title>Blog</title>
+    <link rel="stylesheet" href="assets/bootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet"
+        href="https://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800&amp;display=swap">
+    <link rel="stylesheet"
+        href="https://fonts.googleapis.com/css?family=Lora:400,700,400italic,700italic&amp;display=swap">
+    <link rel="stylesheet" href="assets/fonts/font-awesome.min.css">
 </head>
 
-
-
-
-
 <body>
+    <header class="masthead" style="background-image:url('assets/img/home-bg.jpg');">
+        <div class="overlay"></div>
+        <div class="container">
+            <div class="row">
+                <div class="col-md-10 col-lg-8 mx-auto position-relative">
+                    <div class="site-heading">
+                        <h1>Interview Question</h1><span class="subheading"></span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+    <div class="container">
+        <div class="row">
+            <div class="col-md-10 col-lg-8 col-xl-11">
+                <div class="post-preview"><a href="#">
+                        <h2 class="post-title"><strong><span style="color: rgb(10, 10, 35);">1. Different between local
+                                    storage and session storage.</span></strong><br></h2>
+                        <h3 class="post-subtitle"><span style="color: rgb(10, 10, 35);">sessionStorage is similar to
+                                localStorage ; the difference is that while data in localStorage doesn't expire, data in
+                                sessionStorage is cleared when the page session ends. Whenever a document is loaded in a
+                                particular tab in the browser,
+                                a unique page session gets created and assigned to that particular tab.
 
+
+
+
+
+
+                            </span><br></h3>
+                        <h2 class="post-title"><strong><span style="color: rgb(10, 10, 35);">2. Difference between
+                                    global scope and block scope.</span></strong><br>
+                        </h2>
+                        <h3 class="post-subtitle"><br><span style="color: rgb(10, 10, 35);">
+
+                                In a browser environment, the global scope is controlled by the window object while in
+                                Node. js, it's controlled by the
+                                global object. Block scopes are what you get when you use if statements, for statements,
+                                and the like.
+
+
+
+
+
+                            </span><br><br></h3>
+                        <h2 class="post-title"><strong><span style="color: rgb(10, 10, 35);">3. How does work event loop
+                                    in JavaScript?</span></strong><br>
+                        </h2>
+                        <h3 class="post-subtitle"><br><span style="color: rgb(10, 10, 35);">
+
+                                Event Loop : The event loop is the secret behind JavaScript's asynchronous
+                                programming. JS executes all operations on a single thread, but using a
+                                few smart data structures, it gives us the illusion of multi-threading.
+
+                                Easy Definition :
+                                The Event Loop has one simple job — to monitor the Call Stack and the
+                                Callback Queue or Message Queue.
+
+                                If the Call Stack is empty, it will take the first event from the
+                                Callback queue and will push it to the Call Stack, which effectively runs it.
+
+                                Such an iteration is called a tick in the Event Loop.
+                                Each event is just a function callback.
+
+                                Easiest explanation :
+                                When any Asynchronous event occur such as setTimeOut or promises...
+                                Then these task takes some time to complete I/O if they have any.
+                                If they completed their I/O or don't have any, then they simply put into
+                                message queue or callback queue. Then event loop will firstly execute the
+                                call stack tasks and then look for callback or message queue and then execute it..
+
+                                For more info visit : https://nodejs.dev/learn/the-nodejs-event-loop
+
+
+
+
+                            </span><br><br></h3>
+                        <h2 class="post-title"><strong><span style="color: rgb(10, 10, 35);">4. How many ways get
+                                    undefined in JavaScript.</span></strong><br>
+                        </h2>
+                        <h3 class="post-subtitle"><span style="color: rgb(10, 10, 35);">
+                                undefined is a property of the global object. That is, it is a variable in global scope.
+                                The initial value of undefined
+                                is the primitive value undefined.
+
+                                In all non-legacy browsers, undefined is a non-configurable, non-writable property.
+                                (Even when this is not the case,
+                                avoid overriding it.)
+
+                                A variable that has not been assigned a value is of type undefined. A method or
+                                statement also returns undefined if the
+                                variable that is being evaluated does not have an assigned value. A function returns
+                                undefined if a value was not
+                                returned.
+
+                                Note: While you can use undefined as an identifier (variable name) in any scope other
+                                than the global scope (because
+                                undefined is not a reserved word), doing so is a very bad idea that will make your code
+                                difficult to maintain and debug.
+
+                                // DON'T DO THIS
+
+                                // logs "foo string"
+                                (() => {
+                                const undefined = 'foo';
+                                console.log(undefined, typeof undefined);
+                                })();
+
+                                // logs "foo string"
+                                ((undefined) => {
+                                console.log(undefined, typeof undefined);
+                                })('foo');
+                                Examples
+                                Strict equality and undefined
+                                You can use undefined and the strict equality and inequality operators to determine
+                                whether a variable has a value. In
+                                the following code, the variable x is not initialized, and the if statement evaluates to
+                                true.
+
+
+                            </span><br><br></h3>
+                    </a></div>
+                <hr>
+                <div class="post-preview"><a href="#"></a></div>
+                <hr>
+
+            </div>
+
+
+
+            <script src="assets/bootstrap/js/bootstrap.min.js"></script>
+            <script src="assets/js/clean-blog.js"></script>
 </body>
+
+<footer>
+    <div class="container">
+        <div class="row">
+            <div class="col-md-10 col-lg-8 mx-auto">
+                <ul class="list-inline text-center">
+                    <li class="list-inline-item"><a href="https://facebook.com/musamolla3131">
+
+                            <span class="fa-stack fa-lg"><i class="fa fa-circle fa-stack-2x"></i><i
+                                    class="fa fa-facebook fa-stack-1x fa-inverse"></i></span>
+                        </a>
+                    </li>
+
+                    <li class=" list-inline-item">
+                        <a href="https://github.com/musamolla3131">
+                            <span class="fa-stack fa-lg"><i class="fa fa-circle fa-stack-2x"></i><i
+                                    class="fa fa-github fa-stack-1x fa-inverse"></i></span>
+                        </a>
+                    </li>
+                    <p class="my-4 text-muted copyright">Copyright&nbsp;©&nbsp;Brand 2022</p>
+                </ul>
+            </div>
+        </div>
+    </div>
+</footer>
 
 </html>
